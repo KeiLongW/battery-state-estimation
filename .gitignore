@@ -127,3 +127,19 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+
+.DS_Store
+
+models/
+models/
+logs/
+.vscode/settings.json
+
+*.mat
+*.csv
+*.h5
+
+*.log
+battery-state-estimation/results/trained_model/*.txt
+
+battery-state-estimation/data
