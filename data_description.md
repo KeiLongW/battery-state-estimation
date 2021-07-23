@@ -1,4 +1,9 @@
-# Dataset A data description
+# UNIBO Powertools Dataset
+
+The UNIBO Powertools Dataset has been collected in a laboratory test by an Italian Equipment producer. The cycling experiments are designed to analyze different cells intended for use in various cleaning equipment such as vacuum and automated floor cleaners. The vast dataset is composed of 27 batteries. The main features of the dataset are:
+(1) the use of batteries from different manufacturers, (2) cells with several nominal capacities, (3) cycling is performed until the cell's end-of-life and thus data regarding the cell at different life stages are produced. Three types of tests have been conducted. (I) The standard test, where the battery was discharged at 5A current in main cycles. (II), the high current test, where the battery was discharged at 8A current in main cycles. (III), the preconditioned test, where the battery cells are stored at 45°C environments for 90 days before conducting the test. During discharge, the sampling period is 10 seconds.
+
+# Data description
 
 | Column               | Description                                           |
 | -------------------- | ----------------------------------------------------- |
@@ -61,3 +66,7 @@ Y.Y = cell capacity e.g. 2.5Ah -> 2.5
 AABB = samples delivery date (AA: week, bb: year)
 
 T = test type | S: Standard (5A discharge), H: High Current (8A discharge), P: Pre-conditioned (90 days storing at 45C degree before testing)
+
+# Files
+
+*test_result.csv* contains all the records but the last one of each charge/discharge run. *test_result.csv* contains the last record of each run. A python file for loading data is available at https://github.com/KeiLongW/battery-state-estimation

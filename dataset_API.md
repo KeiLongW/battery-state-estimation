@@ -1,12 +1,12 @@
-# Dataset A API
+# UNIBO Powertools Dataset API
 
-## data_set_a.py
+## unibo_powertools_data.py
 
-Used for loading the dataset A CSVs into memory by the specific chunk size.
+Used for loading the UNIBO Powertools Dataset CSVs into memory by the specific chunk size.
 
 ### Initialization
 
-Initialize the Dataset A object with all data loaded into memory.
+Initialize the UNIBO dataset object with all data loaded into memory.
 
 - test_types: Determine which data with the test types to load
 - chunk_size: Chunk size of data loading
@@ -16,7 +16,7 @@ Initialize the Dataset A object with all data loaded into memory.
 - base_path: Base path of the running source
 
 ```
-dataset = DatasetA(
+dataset = UniboPowertoolsData(
     test_types=['S'], # Empty list for getting all
     chunk_size=1000000,
     lines=[37, 40], # Empty list for getting all
@@ -71,13 +71,13 @@ test_names = dataset.get_all_test_names()
 
 ## model_data_handler.py
 
-Used to construct training and testing input/output data from Dataset A object.
+Used to construct training and testing input/output data from UniboPowertoolsData object.
 
 ### Initialization
 
-Initialize the model data handler object with the prepared Dataset A object and specify the model input columns
+Initialize the model data handler object with the prepared UniboPowertoolsData object and specify the model input columns
 
-- dataset: The prepared Dataset A object
+- dataset: The prepared UniboPowertoolsData object
 - x_indices: The column indices used for model data input
 - scaler_type: class of scaler in sklearn.preprocessing, default=MinMaxScaler
 

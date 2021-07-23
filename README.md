@@ -4,14 +4,20 @@ Estimation of the State of Charge (SOC) of Lithium-ion batteries using Deep LSTM
 
 ## Introduction
 
-This repository provides the implementation of deep LSTMs for SOC estimation. The experiments have been performed on two datasets: the [**LG 18650HG2 Li-ion Battery Data**](https://data.mendeley.com/datasets/cp3473x7xv/3) and the **Dataset A** (it has not been published yet).
+This repository provides the implementation of deep LSTMs for SOC estimation. The experiments have been performed on two datasets: the [**LG 18650HG2 Li-ion Battery Data**](https://data.mendeley.com/datasets/cp3473x7xv/3) and the [**UNIBO Powertools Dataset**](https://doi.org/10.17632/n6xg5fzsbv.1).
 
-### Dataset A, a novel battery dataset
-Dataset A is an original dataset that will be published along with this work. The dataset is described [here](data_description.md). We provide two scripts to load the data and prepare them (e.g. computing SOC and SOH, splitting data into time series, normalize the data, and so on). The API to use the dataset is defined [here](dataset_API.md).
+### UNIBO Powertools Dataset, a novel battery dataset
+The UNIBO Powertools Dataset is an original dataset that will be published along with this work. The dataset is described [here](data_description.md). We provide two scripts to load the data and prepare them (e.g. computing SOC and SOH, splitting data into time series, normalize the data, and so on). The API to use the dataset is defined [here](dataset_API.md).
+
+## Paper
+If you use this dataset, please cite our paper:
+
+Kei Long Wong, Michael Bosello, Rita Tse, Carlo Falcomer, Claudio Rossi, Giovanni Pau. 2021. Li-Ion Batteries State-of-Charge Estimation Using Deep LSTM at Various Battery Specifications and Discharge Cycles. In Conference on Information Technology for Social Good (GoodIT ’21), September 9–11, 2021, Roma, Italy. ACM, New York, NY, USA, 7 pages. https://doi.org/10.1145/3462203.3475878
+
 
 ## Source code structure
 
-The package *data_processing* contains the scripts that load the data from the two sets. *dataset_a.py* loads the data from the csv and compute the derived columns like the SOC one, while *model_data_handler.py* prepare the time series to be used by the neural network. *lg_dataset.py* both loads and prepares the data of the LG set.
+The package *data_processing* contains the scripts that load the data from the two sets. *unibo_powertools_data.py* loads the data from the csv and compute the derived columns like the SOC one, while *model_data_handler.py* prepare the time series to be used by the neural network. *lg_dataset.py* both loads and prepares the data of the LG set.
 
 The *experiments* directory contains the Jupyter notebooks defining the various experiments and LSTM models used. The *results* directory shows the plots of the results and the measurements like RMSE, MAE, etc.
 
@@ -39,7 +45,7 @@ The *experiments* directory contains the Jupyter notebooks defining the various 
 
 Download the [LG dataset](https://data.mendeley.com/datasets/cp3473x7xv/3) and put its content in the directory `battery-state-estimation/data/LG 18650HG2 Li-ion Battery Data/`
 
-~~Download the Dataset A and put its content in the directory `battery-state-estimation/data/Dataset A/`~~
+Download the [**UNIBO dataset**](https://doi.org/10.17632/n6xg5fzsbv.1) and put its content in the directory `battery-state-estimation/data/unibo-powertools-dataset/`
 
 ### 3) Run one of the notebooks
 
