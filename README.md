@@ -9,7 +9,7 @@ This repository provides the implementation of deep LSTMs for SOC estimation. Th
 ### UNIBO Powertools Dataset, a novel battery dataset
 The UNIBO Powertools Dataset is an original dataset that will be published along with this work. The dataset is described [here](data_description.md). We provide two scripts to load the data and prepare them (e.g. computing SOC and SOH, splitting data into time series, normalize the data, and so on). The API to use the dataset is defined [here](dataset_API.md).
 
-# Paper
+## Paper
 If you use this dataset, please cite our paper:
 
 Kei Long Wong, Michael Bosello, Rita Tse, Carlo Falcomer, Claudio Rossi, Giovanni Pau. 2021. Li-Ion Batteries State-of-Charge Estimation Using Deep LSTM at Various Battery Specifications and Discharge Cycles. In Conference on Information Technology for Social Good (GoodIT ’21), September 9–11, 2021, Roma, Italy. ACM, New York, NY, USA, 7 pages. https://doi.org/10.1145/3462203.3475878
