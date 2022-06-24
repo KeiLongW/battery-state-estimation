@@ -51,6 +51,12 @@ The *experiments* directory contains the Jupyter notebooks defining the various 
     pip install plotly
     pip install jupyterlab
 
+#### Alternatively, you can create the conda environment by
+
+````
+conda env create -f environment.yml
+````
+
 #### Let Plotly work in Jupyterlab
 
 1) [Install node](https://nodejs.org/en/download/package-manager)
