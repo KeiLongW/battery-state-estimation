@@ -143,9 +143,9 @@ class LgData():
 
     def keep_only_y_end(self, y, step, is_stateful=False):
         if is_stateful:
-            return y[:,:,::step]
+            return y[:,:,[-1]]
         else:
-            return y[:,::step]
+            return y[:,[-1]]
 
 
 if __name__ == "__main__":
